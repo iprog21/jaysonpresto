@@ -1,0 +1,280 @@
+<% content_for :css do %>
+    <meta name="description" content="Web Developer"/>
+    <!-- images/jaysonpresto-gradpic.jpg -->
+    <link rel="shortcut icon" type="image/png" href="<%= asset_url('jaysonpresto-gradpic.jpg') %>" style= "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+<% end %>
+<% content_for :body do %>
+ <header>
+      <div class="profile-page sidebar-collapse">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+          <div class="container">
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">
+                 <%= image_tag 'jaysonpresto-gradpic.jpg',alt: 'Jayson Presto', style: "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;" %>
+                <span style="text-transform: lowercase;">jaysonpresto</span></a>
+              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Journey</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Tools</a></li>
+                <!-- <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li> -->
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+     <div class="page-content">
+      <div>
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="green">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('images/banner2.jpg');"></div>
+      <div class="container">
+        <div class="content-center">
+          <div class="cc-profile-image">
+            <a href="#">
+                <%= image_tag 'jaysonpresto-gradpic.jpg',alt: 'Jayson Presto' %>
+            </a>
+            </div>
+          <div class="h2 title">Jayson Presto</div>
+          <p class="category text-white">Web & Software Developer</p>
+          <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">   Contact Me
+          </a>
+          <!-- <a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download Resume</a> -->
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="button-container">
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/iprog21" rel="tooltip" title="Follow me on Facebook" target="_reuse_win">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://twitter.com/iprog21" rel="tooltip" title="Follow me on Twitter" target="_reuse_win"><i class="fa fa-twitter" ></i>
+            </a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/jayson-presto/" rel="tooltip" title="Follow me on Linkedin" target="_reuse_win"><i class="fa fa-linkedin"></i>
+            </a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.youtube.com/channel/UCK3DwDFst2eqLybh5nP-vNw?view_as=subscriber" rel="tooltip" title="Subscribe on my Youtube Channel" target="_reuse_win"><i class="fa fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="about">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">My journey as a Programmer </div>
+            <p>Hello! I'm Jayson Presto (iprog21). Web and Software Developer.</p>
+            <p>
+              I started as a Software Developer ( C# ) on my college days.
+              And then after college, i switch as a Web Developer (PHP) because of the job.
+              I was experienced coding in other php frameworks( Yii & CodeIgniter )
+              And at that time i experienced also on how to create your own php framework.
+              At time goes by, I moved to another Programming Language (Ruby) because of work also.
+            </p>
+            <p>
+              Until now, im currently working as a Full Stack Ruby on Rails Developer on <a href="https://www.tikigo.com" target="_blank">TIKIGO.</a>
+            </p>
+
+          </div>
+        </div>
+    <!--     <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">Basic Information</div>
+            <div class="row">
+              <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
+              <div class="col-sm-8">26 years old</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+              <div class="col-sm-8">
+                jaysonpresto.iprog21@gmail.com <br>
+                iprog21@yahoo.com.ph <br>
+                jayson@tikigo.com
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
+              <div class="col-sm-8">+63 966 811 6105</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+              <div class="col-sm-8">Palawan Puerto Princesa, Philippines</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
+              <div class="col-sm-8">Tagalog & English</div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="skill">
+  <div class="container">
+    <div class="h4 text-center mb-4 title">Software and Web Tools Used</div>
+    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">C# (software)</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">90%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">Ruby On Rails (web)</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div><span class="progress-value">95%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">CodeIgniter (web)</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div><span class="progress-value">85%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">Wordpress (web)</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">90%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">HTML&CSS (web)</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div><span class="progress-value">85%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">JAVASCRIPT (web)</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="experience">
+  <div class="container cc-experience">
+    <div class="h4 text-center mb-4 title">Work Experience</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p>April 2017 - Present</p>
+            <div class="h5">TIKIGO</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Full Stack Developer on <a href="https://www.tikigo.com" target="_blank">TIKIGO</a></div>
+            <p>Able to work on backend and frontend development but Im specialized more on backend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Education</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p>2011 - 2016</p>
+            <div class="h5">Bachelor's Degree</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Bachelor of Computer Science</div>
+            <p class="category">Palawan State University, Philippines</p>
+            <p>The school that I started to learn how to create a program(software). :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="contact">
+  <div class="cc-contact-information" style="background-image: url('images/staticmap.png');">
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-0" data-aos="zoom-in">
+              <div class="h4 text-center title">Contact me</div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card-body">
+                    <p class="mb-0"><strong>Address </strong></p>
+                    <p class="pb-2"><i class="fa fa-home"></i> Bgy. San Miguel, Wescom rd., Leotilla's Residence, Puerto Princesa City, Palawan, Philippines</p>
+                    <p class="mb-0"><strong>Email</strong></p>
+                    <p>
+                      <i class="fa fa-envelope"></i> jaysonpresto.iprog21@gmail.com <br>
+                      <i class="fa fa-envelope"></i> iprog21@yahoo.com.ph <br>
+                      <i class="fa fa-envelope"></i> jayson@tikigo.com
+                    </p>
+                     <p class="mb-0"><strong>Phone</strong></p>
+                        <p class="pb-2"><i class="fa fa-whatsapp"></i> +63 966 811 6105 </p>
+                     <p class="mb-0"><strong>Skype</strong></p>
+                    <p class="pb-2"><i class="fa fa-skype"></i> iprog21 </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <footer class="footer">
+      <div class="container text-center">
+        <a class="cc-facebook btn btn-link" href="https://www.facebook.com/iprog21" target="_reuse_win"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
+        <a class="cc-twitter btn btn-link " href="https://twitter.com/iprog21" target="_reuse_win"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+        <a class="cc-linkedin btn btn-link" href="https://www.linkedin.com/in/jayson-presto/" target="_reuse_win"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+        <a class="cc-youtube btn btn-link" href="https://www.youtube.com/channel/UCK3DwDFst2eqLybh5nP-vNw?view_as=subscriber" target="_reuse_win"><i class="fa fa-youtube fa-2x " aria-hidden="true"></i></a>
+      </div>
+      <div class="h4 title text-center">Jayson Presto</div>
+      <div class="text-center text-muted">
+        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+      </div>
+    </footer>
+<% end %>
+<% content_for :js do %>
+<script src="js/core/jquery.3.2.1.min.js"></script>
+<script src="js/core/popper.min.js"></script>
+<script src="js/core/bootstrap.min.js"></script>
+<script src="js/now-ui-kit.js?v=1.1.0"></script>
+<script src="js/aos.js"></script>
+<script src="scripts/main.js"></script>
+<% end %>

@@ -1,0 +1,13 @@
+// {
+//   "name": "jaysonpresto",
+//   "private": true,
+//   "dependencies": {}
+// }
+{
+  "name": "jaysonpresto",
+  "private": true,
+  "description": "a really cool app",
+  "engines": {
+    "node": "8.9.4"
+  }
+}

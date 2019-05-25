@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jaysonpresto|iprog21</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta property="og:title"  content="jaysonpresto|iprog21" >
+    <meta property="og:type"  content="website" >
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url"  content="<%= request.original_url %>" >
+    <meta property="og:image"  content="<%= asset_url('mybg.png') %>" >
+    <meta property="og:description"  content="Programmer" >
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :css %>
+  </head>
+  <body id="top">
+    <%= yield :body%>
+    <%= yield :js %>
+  </body>
+</html>
