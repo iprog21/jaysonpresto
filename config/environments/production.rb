@@ -103,4 +103,7 @@ Rails.application.configure do
 
   # on devise config
   config.action_mailer.default_url_options = { host: 'https://jaysonpresto.herokuapp.com' }
+
+  # analytics
+  GA.tracker = "UA-104168343-2"
 end
