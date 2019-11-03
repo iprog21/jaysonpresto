@@ -13,6 +13,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
+    <% if Rails.env.production?  %>
+      <script data-ad-client="ca-pub-8361735353156697" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <% end %>
     <%= yield :css %>
   </head>
   <body id="top">
