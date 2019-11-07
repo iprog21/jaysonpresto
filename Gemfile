@@ -84,3 +84,6 @@ gem 'awesome_print', require:"ap"
 
 # for analytics
 gem 'google-analytics-rails', '1.1.1'
+
+# for environmental variables
+gem "figaro"
