@@ -1,7 +1,7 @@
 <% content_for :css do %>
     <meta name="description" content="Web Developer"/>
     <!-- images/jaysonpresto-gradpic.jpg -->
-    <link rel="shortcut icon" type="image/png" href="<%= asset_url('jaysonpresto-gradpic.jpg') %>" style= "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;">
+    <link rel="shortcut icon" type="image/png" href="<%= asset_url(current_logo) %>" style= "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
@@ -14,7 +14,7 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
           <div class="container">
             <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">
-                 <%= image_tag 'jaysonpresto-gradpic.jpg',alt: 'Jayson Presto', style: "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;" %>
+                 <%= image_tag current_logo,alt: 'Jayson Presto', style: "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;" %>
                 <span style="text-transform: lowercase;">jaysonpresto</span></a>
               <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
             </div>
@@ -36,12 +36,12 @@
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/banner2.jpg');"></div>
+      <div class="page-header-image" data-parallax="true" style="background-image: url('images/<%= current_banner %>');background-size:contain;"></div>
       <div class="container">
         <div class="content-center">
           <div class="cc-profile-image">
             <a href="#">
-                <%= image_tag 'jaysonpresto-gradpic.jpg',alt: 'Jayson Presto' %>
+                <%= image_tag current_logo,alt: 'Jayson Presto' %>
             </a>
             </div>
           <div class="h2 title">Jayson Presto</div>
