@@ -1,0 +1,138 @@
+<% content_for :css do %>
+    <meta name="description" content="NCOV19-Tracker"/>
+    <!-- images/jaysonpresto-gradpic.jpg -->
+    <link rel="shortcut icon" type="image/png" href="<%= asset_url(current_logo) %>" style= "width: 20px;margin-right: 10px; width: 30px;height: 30px;border-radius: 50%;">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+      /* table tbody, table thead{
+          display: block;
+          width: 100%;
+      }
+
+      table tbody {
+        overflow: auto;
+        height: 100px;
+      } */
+
+   
+    </style>
+<% end %>
+<% content_for :body do %>
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">COVID-19 Updates</h1>
+          <p class="lead ">Coronavirus disease (COVID-19) is an infectious disease caused by a new virus.
+            The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. You can protect yourself by washing your hands frequently, avoiding touching your face, and avoiding close contact (1 meter or 3 feet) with people who are unwell.
+          </p>
+          <strong for="">HOW IT SPREADS</strong>
+          <p class="lead ">
+            Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze. It also spreads when a person touches a surface or object that has the virus on it, then touches their eyes, nose, or mouth.
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 ">
+        <div class="container">
+    
+         <table class="table table-bordered ">
+          <thead>
+            <th>Flag</th>
+            <th>Country</th>
+            <th>Cases</th>
+            <th>Today Cases</th>
+            <th>Deaths</th>
+            <th>Today Deaths</th>
+            <th>Recorvered</th>
+            <th>Active</th>
+            <th>Critical</th>
+            <th>Cases Per 1 Million</th>
+            <th>Deaths Per 1 Million</th>
+          </thead>
+          <tbody>
+            <% @countries.each do |area| %>
+            <tr>
+              <td><%= image_tag(area['countryInfo']['flag'], style: "width: 20px; height: 20px") %></td>
+              <td><%= area['country'] %></td>
+              <td><%= number_with_delimiter(area['cases']) %></td>
+              <td><%= number_with_delimiter(area['todayCases']) %></td>
+              <td><%= number_with_delimiter(area['deaths']) %></td>
+              <td><%= number_with_delimiter(area['todayDeaths']) %></td>
+              <td><%= number_with_delimiter(area['recovered']) %></td>
+              <td><%= number_with_delimiter(area['active']) %></td>
+              <td><%= number_with_delimiter(area['critical']) %></td>
+              <td><%= number_with_delimiter(area['casesPerOneMillion']) %></td>
+              <td><%= number_with_delimiter(area['deathsPerOneMillion']) %></td>
+            </tr>
+            <% end %>
+          </tbody>
+         </table>
+
+          <!-- <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>This page is provided by <%= link_to 'iprog21.', root_path %></p>
+        <p>The data api are comming from <%= link_to 'here.', 'https://corona.lmao.ninja/' %></p>
+      </div>
+    </footer>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% end %>
+<% content_for :js do %>
+<script src="js/core/jquery.3.2.1.min.js"></script>
+<script src="js/core/popper.min.js"></script>
+<script src="js/core/bootstrap.min.js"></script>
+<script src="js/now-ui-kit.js?v=1.1.0"></script>
+<script src="js/aos.js"></script>
+<script src="scripts/main.js"></script>
+<% end %>
