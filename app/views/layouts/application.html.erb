@@ -20,6 +20,7 @@
   </head>
   <body id="top">
     <%= yield :body%>
+    <%= link_to 'Check COVID-19 Updates', ncov_url, class: 'btn btn-primary btn-lg' %>
     <%= yield :js %>
   </body>
 </html>
