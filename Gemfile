@@ -87,3 +87,8 @@ gem 'google-analytics-rails', '1.1.1'
 
 # for environmental variables
 gem "figaro"
+
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
