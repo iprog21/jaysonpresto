@@ -12,14 +12,17 @@
 
 ActiveRecord::Schema.define(version: 2019_08_10_160952) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "positions", force: :cascade do |t|
     t.string "name"
     t.string "slug"
   end
 
   create_table "project_positions", force: :cascade do |t|
-    t.integer "project_id"
-    t.integer "position_id"
+    t.bigint "project_id"
+    t.bigint "position_id"
     t.index ["position_id"], name: "index_project_positions_on_position_id"
     t.index ["project_id"], name: "index_project_positions_on_project_id"
   end
@@ -30,15 +33,15 @@ ActiveRecord::Schema.define(version: 2019_08_10_160952) do
   end
 
   create_table "user_positions", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "position_id"
+    t.bigint "user_id"
+    t.bigint "position_id"
     t.index ["position_id"], name: "index_user_positions_on_position_id"
     t.index ["user_id"], name: "index_user_positions_on_user_id"
   end
 
   create_table "user_projects", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
+    t.bigint "user_id"
+    t.bigint "project_id"
     t.index ["project_id"], name: "index_user_projects_on_project_id"
     t.index ["user_id"], name: "index_user_projects_on_user_id"
   end
