@@ -102,7 +102,19 @@ Rails.application.configure do
   # for heruko
 
   # on devise config
-  config.action_mailer.default_url_options = { host: 'https://jaysonpresto.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://jaysonpresto.me' }
+  
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+    address:              'mail.privateemail.com',
+    port:                 '587',
+    authentication:       'login',
+    user_name:            Figaro.env.smtp_email,
+    password:             Figaro.env.smtp_password,
+    domain:               'jaysonpresto.me',
+    openssl_verify_mode: 'none',
+    enable_starttls_auto: true
+  }
 
   # analytics
   GA.tracker = "UA-104168343-2"

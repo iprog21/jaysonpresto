@@ -65,11 +65,13 @@ Rails.application.configure do
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :user_name            => "jezelpresto@gmail.com",
-    :password             => "gmailProgrammer0518",
-    :authentication       => "plain",
-    :enable_starttls_auto => true
+    address:              'mail.privateemail.com',
+    port:                 '587',
+    authentication:       'login',
+    user_name:            Figaro.env.smtp_email,
+    password:             Figaro.env.smtp_password,
+    domain:               'jaysonpresto.me',
+    openssl_verify_mode: 'none',
+    enable_starttls_auto: true
   }
 end

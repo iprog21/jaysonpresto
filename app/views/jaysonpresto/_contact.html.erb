@@ -54,8 +54,8 @@
           <h3>How Can I <span>Help You?</span></h3>
         </div>
 
-        <form id="contact_form" class="contact-form" action="contact_form/contact_form.php" method="post">
-
+        
+          <%= form_tag send_message_by_visitor_path do %>
           <div class="messages"></div>
 
           <div class="controls two-columns">
@@ -92,16 +92,9 @@
               </div>
             </div>
 
-            <!-- <div class="g-recaptcha" data-sitekey="6Lc84b8ZAAAAADucgTQwIyp46N2l7ToHsbzvrKMK" data-theme="dark"></div> -->
-            
-            <button class="g-recaptcha" 
-            data-sitekey="6Lc84b8ZAAAAADucgTQwIyp46N2l7ToHsbzvrKMK" 
-            data-callback='onSubmit' 
-            data-action='submit'>Submit</button>
-
-            <!-- <input type="submit" class="button btn-send" value="Send message"> -->
+            <input type="submit" class="button btn-send" value="Send message">
           </div>
-        </form>
+          <% end %>
       </div>
       <!-- End of Contact Form -->
     </div>
