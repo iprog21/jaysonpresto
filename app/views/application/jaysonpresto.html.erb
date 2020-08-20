@@ -39,7 +39,10 @@
            </div>
            <div class="header-titles">
              <h2>Jayson Presto</h2>
-             <h4>Freelance Programmer</h4>
+             <h4>
+               Ruby on Rails Developer <br>
+               Since 2017 
+            </h4>
            </div>
          </div>
 
@@ -86,19 +89,22 @@
                  <div class="row">
                    <div class="col-sm-12 col-md-12 col-lg-12">
                      <div class="title-block">
-                       <h2>Jayson Presto</h2>
+                       <h2>What Can I Do?</h2>
                        <div class="owl-carousel text-rotation">
                          <% [
-                              'Ruby on Rails Developer', 
-                              'Wordpress Developer',
-                              'CodeIgniter Developer',
-                              'C# Developer'
+                              'Creating Fully Functional Ruby on Rails Application', 
+                              'Continuing Existing Ruby on Rails Application',
+                              'Offering Ruby on Rails Tutorials',
+                              'Participating As An Independent Contractor'
                             ].each do |code_name| %>
                             <div class="item">
                               <div class="sp-subtitle"><%= code_name %></div>
                             </div>
                           <% end %>
                        </div>
+                       <br>
+                       <h4>Getting Interested?</h4>
+                       <%= link_to 'Contact Me', "javascript:void(0);", onClick: "visit_contact_page(this)" %>
                      </div>
                    </div>
                  </div>
@@ -184,7 +190,11 @@
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script src="js/animating.js"></script>
-
+<script type="text/javascript">
+  function visit_contact_page(){
+    $('#contact-me').trigger('click');
+  }
+</script>
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
