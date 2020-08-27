@@ -1,0 +1,65 @@
+<% content_for :body do %>
+<div class="content-area custom-area">
+  <div class="row">
+   <h2><%= pluralize(@participants.size, 'Special') %> |  <%= link_to 'Back To Participants List', projects_participants_path, data: {turbolinks: false} %></h2>
+   
+   <table class="table table-bordered table-responsive">
+    <thead>
+     <tr>
+        <!-- <th>ID</th> -->
+       <th>Position</th>
+       <th>Full Name</th>
+       <!-- <th></th> -->
+       <!-- <th>GW?</th>
+       <th>2nd GW?</th> -->
+       <th>Action</th>
+     </tr>
+    </thead>
+    <tbody id="specials-list">
+      <% @participants.each do |participant| %>
+      <tr>
+        <!-- <td><%= participant.id %></td> -->
+        <td><%= participant.position %></td>
+        <td><%= participant.full_name %></td>
+        <!-- <td><%= answer(participant.winner) %></td> -->
+        <!-- <td>
+          <%= answer(participant.grand_winner) %>
+          <% if participant.grand_winner  %>
+          | <%= link_to 'Deactivate', deactivate_grand_winner_projects_participant_path(participant), method: :post  %>
+          <% else %>
+           <%= link_to '| Activate', set_as_grand_winner_projects_participant_path(participant), method: :post if !RafflesParticipant.exists?(grand_winner: true) if !participant.second_grand_winner?  %>
+          <% end %>
+        </td> -->
+        <!-- <td>
+          <%= answer(participant.second_grand_winner) %>
+          <% if participant.second_grand_winner  %>
+          | <%= link_to 'Deactivate', deactivate_second_grand_winner_projects_participant_path(participant), method: :post  %> 
+          <% else %>
+            <%= link_to '| Activate', set_as_second_grand_winner_projects_participant_path(participant), method: :post if !RafflesParticipant.exists?(second_grand_winner: true ) if !participant.grand_winner?  %>
+          <% end %>
+        </td> -->
+        <td>
+          <%= link_to  unset_to_special_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-danger' do %>
+          <i class="glyphicon glyphicon-remove"></i>
+          <% end %>
+          <%= link_to move_to_top_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-default' do %>
+            <i class="glyphicon glyphicon-circle-arrow-up"></i>
+          <% end %>
+          <%= link_to  move_up_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-default' do %>
+            <i class="glyphicon glyphicon-chevron-up"></i>
+          <% end %>
+          <%= link_to move_down_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-default' do %>
+          <i class="glyphicon glyphicon-chevron-down"></i>
+          <% end %>
+          <%= link_to move_to_bottom_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-default' do %>
+            <i class="glyphicon glyphicon-circle-arrow-down"></i>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+   </table>
+   <!-- <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p> -->
+  </div>
+</div>
+<% end %>

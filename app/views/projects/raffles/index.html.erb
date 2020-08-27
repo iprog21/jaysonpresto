@@ -1,0 +1,67 @@
+<% content_for :css do %>
+<style>
+     .page-content {
+        min-height: 50vh !important;
+        height: 50vh !important;
+      } 
+</style>
+<% end %>
+<% content_for :body do %>
+<div id="raffle-container" class="content-area">
+  <div class="row">
+    <!-- Home Subpage -->
+    <div class="col-xl-12">
+    <div id="participants-output"></div>
+    </div>
+    <!-- End of Home Subpage -->
+  </div>
+</div>
+
+<% end %>
+<% content_for :js do %>
+<script text="type/javascript">
+  var output, started, duration, desired;
+  var search_winner_enabled = false;
+  var search_winner_url = "<%= search_winner_projects_raffles_url %>";
+
+  // Constants
+  duration = 5000;
+  desired = '50';
+
+  // Initial setup
+  output = $('#participants-output');
+  // started = new Date().getTime();
+
+  $('#btn-search-lucky-winner').on('click', function(){
+    output.text('').removeClass('winner-color-bg');
+    duration = 5000;
+    started = new Date().getTime();
+    search_winner();
+  });
+
+  // Animate!
+  function search_winner(){
+    animationTimer = setInterval(function() {
+        // If the value is what we want, stop animating
+        // or if the duration has been exceeded, stop animating
+        if (new Date().getTime() - started > duration) {
+            clearInterval(animationTimer);
+         
+            $.get(search_winner_url, function(data, status){
+              output.addClass('winner-color-bg').text(data['winner']);
+            });
+            
+        } else {
+            console.log('animating');
+            // Generate a random string to use for the next animation step
+            output.text(
+                ''+
+                Math.floor(Math.random() * 10)+
+                Math.floor(Math.random() * 10)
+            );
+        }
+    }, 100);
+  }
+  
+</script>
+<% end %>

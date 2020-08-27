@@ -1,0 +1,35 @@
+<% content_for :body do %>
+<div class="content-area custom-area">
+  <%= render 'message_display_result' %>
+  <div class="row">
+   <h2>Participants |  
+     <%= link_to 'Add Participant', new_projects_participant_path, data: {turbolinks: false} %>
+      or
+      <%= link_to 'Import Participants', import_participants_projects_participants_path, data: {turbolinks: false} %>
+    </h2>
+   
+   <table class="table table-bordered table-responsive">
+    <thead>
+     <tr>
+       <th>ID</th>
+       <th>Full Name</th>
+       <th width="30%">Action</th>
+     </tr>
+    </thead>
+    <tbody>
+      <% @participants.each do |participant| %>
+      <tr>
+        <td><%= participant.id %></td>
+        <td><%= participant.full_name %></td>
+        <td>
+          <%= link_to 'Edit', edit_projects_participant_path(participant), data: {turbolinks: false}, class: 'btn btn-sm btn-default' %>
+          <%= link_to 'Move To S', set_to_special_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-success'  %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+   </table>
+   <%= will_paginate @participants   %>
+  </div>
+</div>
+<% end %>

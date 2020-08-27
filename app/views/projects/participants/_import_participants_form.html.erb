@@ -1,0 +1,10 @@
+<%= form_tag request.url, multipart: true do %>
+    <div class="field">
+      <label for="">CSV/Excel File</label>
+      <%= file_field_tag :file, class: 'form-control' %>
+    </div>
+    <br>
+    <div class="field">
+      <button type="submit" class="ui button large green">Import Participants Now</button> 
+    </div>
+  <% end %>

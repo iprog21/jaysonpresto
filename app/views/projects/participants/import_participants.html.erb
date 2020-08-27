@@ -1,0 +1,10 @@
+<%= content_for :body do %>
+<div class="content-area custom-area">
+  <div class="row">
+    <%= render 'message_display_result' %>
+    <h1>Import Participants | <%= link_to 'Back To Participants List', projects_participants_path, data: {turbolinks: false} %></h2>
+    </h1> 
+    <%= render 'import_participants_form' %>
+  </div>
+</div>
+<% end %>

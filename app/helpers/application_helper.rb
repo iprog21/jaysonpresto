@@ -1,7 +1,7 @@
 module ApplicationHelper
-  def current_logo
+  def current_logo(logo = 'jaysonpresto-gradpic.jpg')
     # 'my-baby.jpg'
-    'jaysonpresto-gradpic.jpg'
+    logo
   end
   def current_banner
     'my-family.jpg'
@@ -9,4 +9,7 @@ module ApplicationHelper
   def my_birthday(birth_date = "1993-02-21")
     ((Time.zone.now -  Date.strptime(birth_date).to_time) / 1.year.seconds).floor
   end
+  def answer(truth, opts={})
+		truth ? (opts[:affirmative] || "Yes") : (opts[:negative] || "No")
+	end
 end
