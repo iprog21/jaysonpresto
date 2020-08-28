@@ -10,7 +10,7 @@ class Projects::ParticipantsController < ApplicationController
     @participants = RafflesParticipant.waiting.paginate(page: params[:page], per_page: 10)
   end
   def s
-    @participants = RafflesParticipant.default_winners.order(:position)
+    @participants = RafflesParticipant.candidates.order(:position)
   end
   def new
     @participant = RafflesParticipant.new
