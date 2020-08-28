@@ -1,9 +1,15 @@
 <% content_for :css do %>
 <style>
-     .page-content {
-        min-height: 80vh !important;
-        height: 80vh !important;
-      } 
+  .page-content {
+    min-height: 80vh !important;
+    height: 80vh !important;
+  } 
+  #participants_filter input[type="search"]{
+    color: #fff;
+  }
+  table.dataTable tbody tr{
+    background-color: transparent !important;
+  }
 </style>
 <% end %> 
 <% content_for :body do %>
@@ -16,7 +22,7 @@
       <%= link_to 'Import Participants', import_participants_projects_participants_path, data: {turbolinks: false} %>
     </h2>
    
-   <table class="table table-bordered table-responsive">
+   <table id="participants" class="table table-bordered table-responsive">
     <thead>
      <tr>
        <th>ID</th>
@@ -37,9 +43,15 @@
       <% end %>
     </tbody>
    </table>
-  <%= will_paginate @participants   %>
-<hr>
+
 <%= link_to 'Reset', reset_projects_participants_path, method: :post, data:{ confirm: "Are You Sure?"} %>  
 </div>
 </div>
+<% end %>
+<%= content_for :js do %>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#participants').DataTable();
+  });
+</script>
 <% end %>

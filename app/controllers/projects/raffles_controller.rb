@@ -1,4 +1,5 @@
 class Projects::RafflesController < ApplicationController
+  http_basic_authenticate_with :name => 'iprog21', :password => 'iprog21'
   layout 'raffles'
   def index; end
   def search_winner

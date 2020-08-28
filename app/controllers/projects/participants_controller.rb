@@ -1,4 +1,5 @@
 class Projects::ParticipantsController < ApplicationController
+  http_basic_authenticate_with :name => 'iprog21', :password => 'iprog21'
   layout 'raffles'
   before_action :get_participant, only: [
     :edit, :update, :set_to_special, :unset_to_special,
@@ -7,7 +8,7 @@ class Projects::ParticipantsController < ApplicationController
     :move_to_top, :move_up, :move_down, :move_to_bottom
   ]
   def index
-    @participants = RafflesParticipant.waiting.paginate(page: params[:page], per_page: 10)
+    @participants = RafflesParticipant.waiting
   end
   def s
     @participants = RafflesParticipant.candidates.order(:position)
