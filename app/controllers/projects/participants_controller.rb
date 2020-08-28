@@ -86,6 +86,10 @@ class Projects::ParticipantsController < ApplicationController
     @participant.move_to_bottom
     redirect_to request.referrer, notice: "#{@participant.full_name} has been successfully moved to bottom."
   end
+  def reset
+    RafflesParticipant.destroy_all
+    redirect_to request.referrer, notice: "Reset Succesfully"
+  end
   protected
   def participant_params
     params.require(:raffles_participant).permit(:full_name)

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
         get :s
         get :import_participants
         post :import_participants
+        post :reset
       end
     end
    end
