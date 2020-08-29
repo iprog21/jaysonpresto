@@ -13,7 +13,7 @@ class Projects::RafflesController < ApplicationController
       winner = @participants.first
       winner.winner = true
       winner.save(validate: false)
-      winner_message = "The Lucky Winner is #{winner.full_name}"
+      winner_message = winner.full_name
     end
   
     render json:  {

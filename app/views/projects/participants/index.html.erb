@@ -42,7 +42,12 @@
         <td><%= participant.full_name %></td>
         <td>
           <%= link_to 'Edit', edit_projects_participant_path(participant), data: {turbolinks: false}, class: 'btn btn-sm btn-default' %>
-          <%= link_to 'Move To S', set_to_special_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-success'  %>
+          
+          <% if participant.special? %> 
+            <%= link_to 'Remove from s', unset_to_special_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-danger'  %>
+          <% else %>
+            <%= link_to 'Move to s', set_to_special_projects_participant_path(participant), method: :post, class: 'btn btn-sm btn-success'  %>
+          <% end %>
         </td>
       </tr>
       <% end %>
