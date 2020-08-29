@@ -234,6 +234,7 @@
   // started = new Date().getTime();
 
   $('#btn-search-lucky-winner').on('click', function(){
+		$(this).fadeOut();
     $('#winner-header').hide();
     output.text('').removeClass('wavetext');
     duration = 5000;
@@ -267,6 +268,7 @@
               
               counting_numbers.pause();
               cheering_kids.play();
+							$("#btn-search-lucky-winner").fadeIn();
             });
             
         } else {
