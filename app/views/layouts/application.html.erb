@@ -11,7 +11,7 @@
     <meta property="og:image"  content="<%= asset_url('mybg.png') %>" >
     <meta property="og:description"  content="Programmer" >
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <% if Rails.env.production?  %>
