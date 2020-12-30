@@ -1,0 +1,67 @@
+<h1 class="center">Programming Notes</h1>
+<code>I used all these notes in my coding adventure. You can copy and use it also. Happy Coding! :)</code>
+<br><br>
+<div id="note-lists">
+	<!-- start -->
+	<div class="note-section rainbow">
+		<h3 class="header-title">Search Location of mysql.sock</h3>
+		<p class="answer">
+			Login on your mysql: mysql -uroot -p <br>
+			mysql> show variables like 'socket'; 
+		</p>
+	</div>
+
+	<div class="note-section rainbow">
+		<h3 class="header-title">List GIT logs in Oneline with Graph</h3>
+		<p class="answer">
+			git log --graph --oneline --decorate
+		</p>
+	</div>
+
+	<div class="note-section rainbow">
+		<h3 class="header-title">Remove all GIT local branches except master branch</h3>
+		<p class="answer">
+			git branch | grep -v "master" | xargs git branch -D
+		</p>
+	</div>
+
+	<div class="note-section rainbow">
+		<h3 class="header-title">Extract TAR file on the Terminal</h3>
+		<p class="answer">
+			tar -xvf file.tar
+		</p>
+	</div>
+
+	<div class="note-section rainbow">
+		<h3 class="header-title">Extract GZIP file</h3>
+		<p class="answer">
+			gunzip -c file.gz
+		</p>
+	</div>
+
+	<div class="note-section rainbow">
+		<h3 class="header-title">Import GZIP file postgres database</h3>
+		<p class="answer">
+			gunzip -c file.gz | psql database_name <br>
+			<code>Note: database_name should be exists </code>
+		</p>
+	</div>
+
+
+
+	<!-- end -->
+</div>
+
+<% content_for :css do %>
+<style>
+	.programming-notes{
+		border-radius: 0px !important;
+		overflow-x: scroll;
+	}
+	.note-section {
+		background-color: rgba(0, 0, 0, 0.8);
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+</style>
+<% end %>

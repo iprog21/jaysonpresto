@@ -4,7 +4,7 @@ Rails.application.routes.draw do
    root 'application#jaysonpresto'
    post '/send-message-by-visitor/', to: 'application#send_message_by_visitor', as: :send_message_by_visitor
    get '/ncov19-tracker/', to: 'virus#corona', as: :ncov
-
+   resources :programming_notes, path: 'programming-notes'
    namespace :projects do
     resources :raffles, path: 'raffle-draw' do
       collection do

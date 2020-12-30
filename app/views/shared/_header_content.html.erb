@@ -1,0 +1,36 @@
+<div class="header-content">
+	<div class="header-photo">
+	 <%= image_tag current_logo,alt: 'Jayson Presto' %>
+	</div>
+	<div class="header-titles">
+		<h2><%= link_to 'Jayson Presto', root_path %></h2>
+		<h4>
+			Associate Software Engineer <br>
+			in <%= link_to 'SPROBE', 'https://sprobe.com/', target: '_blank' %>
+			<hr>
+			<strong> Primary Role</strong> <br>
+			Mid Senior Ruby on Rails Developer <br>
+			Since 2017 <br>
+			$10/hr
+
+	 </h4>
+	</div>
+
+	<div class="social-links">
+		<ul>
+			<li><a href="https://www.linkedin.com/in/jayson-presto/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+			<li><a href="https://www.facebook.com/iprog21" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="https://twitter.com/iprog21" target="_blank"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="https://www.youtube.com/channel/UCK3DwDFst2eqLybh5nP-vNw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+			<li><a href="https://github.com/iprog21" target="_blank"><i class="fab fa-github"></i></a></li>
+		</ul>
+	</div>
+
+	<div class="header-buttons">
+		<a href="img/Jayson-Presto.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+		<br>
+		<%= link_to "Programming Notes", programming_notes_path %>
+	</div>
+
+	<div class="copyrights">© <%= Date.today.year %> All rights reserved.</div>
+</div>

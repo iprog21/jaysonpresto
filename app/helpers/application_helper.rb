@@ -1,5 +1,6 @@
 module ApplicationHelper
-  def current_logo(logo = 'jaysonpresto-gradpic.jpg')
+  def current_logo(logo = 'familypic.jpg')
+    #jaysonpresto-gradpic.jpg
     # 'my-baby.jpg'
     logo
   end
